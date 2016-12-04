@@ -12,7 +12,10 @@ class ViewController: UIViewController {
 
     @IBAction
     func add() {
-        print("eaten");
+        let Name = "eggplant brownie"
+        let Happiness = "5"
+        
+        print("eaten \(Name) with happiness \(Happiness)");
     }
 
 
