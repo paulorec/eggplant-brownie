@@ -10,10 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet
+    var ibNameTextField:UITextField?=UITextField()
+    
+    @IBOutlet
+    var ibHappinessTextField:UITextField?=UITextField()
+    
     @IBAction
     func add() {
-        let Name = "eggplant brownie"
-        let Happiness = "5"
+        let Name:String? = ibNameTextField?.text;
+        
+        let Happiness:String? = ibHappinessTextField?.text;
         
         print("eaten \(Name) with happiness \(Happiness)");
     }
