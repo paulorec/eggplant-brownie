@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    class Meal {
+        var happiness:Int?
+        var name:String?
+        
+        init(happiness:Int, name:String) {
+            
+        }
+    }
+    
     @IBOutlet
     var ibNameTextField:UITextField?=UITextField()
     
@@ -20,9 +29,12 @@ class ViewController: UIViewController {
     func add() {
         let Name:String? = ibNameTextField?.text;
         
-        let Happiness:String? = ibHappinessTextField?.text;
+        let Happiness:Int? = Int(ibHappinessTextField!.text!)
         
-        print("eaten \(Name) with happiness \(Happiness)");
+        let newMeal:Meal = Meal(happiness: Happiness!, name : Name!)
+        
+        
+        print("eaten \(newMeal.name) with happiness \(newMeal.happiness)");
     }
     
     func test(param1:Array<String>) -> String {
