@@ -24,6 +24,22 @@ class ViewController: UIViewController {
         
         print("eaten \(Name) with happiness \(Happiness)");
     }
+    
+    func test(param1:Array<String>) -> String {
+        
+        var returnData:String = "";
+        
+        for value in param1 {
+            
+            returnData += value
+        }
+        
+        return returnData
+    }
+    
+    var param1:Array<String> = ["test", "test2"]
+    
+    
 
 
 }
