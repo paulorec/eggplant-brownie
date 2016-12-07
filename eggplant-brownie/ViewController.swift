@@ -8,31 +8,34 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    class Meal {
-        var happiness:Int?
-        var name:String?
+class Meal {
+    var happiness:Int? = Optional<Int>(1)
+    var name:String? = Optional<String>("")
+    
+    init(happiness:Int, name:String) {
         
-        init(happiness:Int, name:String) {
-            
-        }
+        self.happiness=happiness;
+        self.name=name;
+        
     }
+}
+
+class ViewController: UIViewController {
     
     @IBOutlet
-    var ibNameTextField:UITextField?=UITextField()
+    var ibNameTextField:UITextField? = Optional<UITextField>(UITextField());
     
     @IBOutlet
-    var ibHappinessTextField:UITextField?=UITextField()
+    var ibHappinessTextField:UITextField? = Optional<UITextField>(UITextField());
     
     @IBAction
     func add() {
+        
         let Name:String? = ibNameTextField?.text;
         
         let Happiness:Int? = Int(ibHappinessTextField!.text!)
         
         let newMeal:Meal = Meal(happiness: Happiness!, name : Name!)
-        
         
         print("eaten \(newMeal.name) with happiness \(newMeal.happiness)");
     }
